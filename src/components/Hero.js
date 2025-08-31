@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function Header({ message }) {
+export default function Hero() {
   const quotes = [
     "The most essential things cannot be seen by our eyes, they can be felt by our hearts. — The Little Prince",
     "Code is like humor. When you have to explain it, it’s bad.",
@@ -16,14 +16,19 @@ export default function Header({ message }) {
   }, []);
 
   return (
-    <header>
+    <header className="header-hero">
+      {/* Name */}
       <h1>Muzhgan Rahimi</h1>
 
-      {/* Custom message */}
-      <p>{message || "Welcome to my portfolio! Here you can see my projects, skills, and journey as a developer."}</p>
+      {/* Tagline / Message */}
+      <p>
+        Welcome to my portfolio! Explore my projects, skills, and journey as a developer.
+      </p>
 
       {/* Random quote */}
-      <p className="quote">“{quote}”</p>
+      <blockquote className="hero-quote">
+        “{quote}”
+      </blockquote>
     </header>
   );
 }

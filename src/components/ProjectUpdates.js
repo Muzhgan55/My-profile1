@@ -5,7 +5,10 @@ const ProjectUpdates = () => {
   const [updates, setUpdates] = useState([
     "🚀 Portfolio redesign launched!",
     "🌟 Added dark mode support",
-    "📂 Uploaded new project: Freelance-invoices App"
+    "📂 Uploaded new project: Freelance-invoices App",
+    "Working on a new project",
+    "The School Portal site is in Progress.",
+    "The Skylight Cinema is almost done",
   ]);
   const [index, setIndex] = useState(0);
 
