@@ -75,8 +75,15 @@ function ContactForm() {
     <div className="contact-form p-6 bg-gray-50 rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
 
+      {/* Contact Intro Message */}
+      <p className="contact-intro">
+        I’m always open to internships, collaborations, and freelance opportunities. 
+  If you’d like to work together or simply say hello, feel free to send me a message below.
+      </p>
+
       {savedData && <p className="hint mb-2">💾 You have unsent message data saved!</p>}
 
+      {/* Contact Form */}
       <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
         <label className="flex flex-col">
           Name:
@@ -99,7 +106,9 @@ function ContactForm() {
             onChange={handleChange}
             className="p-2 border rounded"
           />
-          {(errors.email || emailError) && <span className="text-red-500 text-sm">{errors.email || emailError}</span>}
+          {(errors.email || emailError) && (
+            <span className="text-red-500 text-sm">{errors.email || emailError}</span>
+          )}
         </label>
 
         <label className="flex flex-col">
@@ -114,7 +123,10 @@ function ContactForm() {
           {errors.message && <span className="text-red-500 text-sm">{errors.message}</span>}
         </label>
 
-        <button type="submit" className="btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+        <button
+          type="submit"
+          className="btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+        >
           Send Message
         </button>
       </form>
